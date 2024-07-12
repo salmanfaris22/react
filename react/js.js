@@ -16,8 +16,19 @@
 //      .catch((err)=>console.log(err))
 
 
-let a=10
-function abc(){
+const x=document.getElementsByTagName('body')
+// function abc(){
+//     x.innerHTML= "hhh"
+// }
+ß
 
-}
+
+const l = document.createElement('li')
+l.innerHTML="dd"
+
+l.appendChild(x)
+
+
+
+
 
