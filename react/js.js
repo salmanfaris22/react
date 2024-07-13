@@ -1,33 +1,74 @@
-
 // function abc(cb){
-//     me= false
+//     return new Promise((res,rej)=>{
+//         res("sugalle")
+//         cb()
+//        })
+// }
+
+// function abcd(cb){
+//     return new Promise((res,rej)=>{
+//         res(`s : `)
+//         cb()
+//        })
+// }
+
+// function a(){
 //    return new Promise((res,rej)=>{
-//       if(me){
-//         res("hy i'm hear")
-//       }else{
-//         rej("i'm not exits")
-//       }
+//     res("s")
 //    })
-   
-  
 // }
 
-// abc().then((res)=>console.log(res))
-//      .catch((err)=>console.log(err))
 
 
-const x=document.getElementsByTagName('body')
-// function abc(){
-//     x.innerHTML= "hhh"
+
+
+// async function news(){
+//    try{
+//      const res = await abc()
+//      const res2 = await abcd()
+//      const  res3 = await a(res2)
+     
+//      console.log(res,res2,res3);
+//    }catch{
+//    console.log("erroe");
+//    }
 // }
-ß
+// news()
 
 
-const l = document.createElement('li')
-l.innerHTML="dd"
+// const result = confirm('Are you sure?');
+// console.log(result); // true/false\
 
-l.appendChild(x)
 
+
+
+
+
+
+
+
+
+
+
+
+const p1 = new Promise((res,rej)=>{
+    res("start")
+})
+const p2 = new Promise((res,rej)=>{
+    res("goine")
+})
+const p3 = new Promise((res,rej)=>{
+    rej("finishing")
+})
+const p4 = new Promise((res,rej)=>{
+    res("ending")
+})
+
+
+const pro = Promise.allSettled([p1,p2,p3,p4])
+.then((data)=>{
+    console.log(data);
+})
 
 
 
